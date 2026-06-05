@@ -26,4 +26,5 @@ public class Departement
         get;
         set;
     }
+    public ICollection<Classroom>Classrooms {get; set;} = new List<Classroom>();
 }

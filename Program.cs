@@ -1,5 +1,12 @@
+using System.Data.Common;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
+builder.Services.AddDbContext<AppDbContext>(
+    options => options.UseSqlite("Data Source = StudentManagement.db ")
+);
 var app = builder.Build();
 app.MapControllers();
 app.Run();

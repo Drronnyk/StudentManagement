@@ -1,4 +1,4 @@
-public class Class
+public class Classroom
 {
     public int Id
     {
@@ -30,4 +30,8 @@ public class Class
         get;
         set;
     }
+    public Departement Departement{ get; set;} = null!;
+    public Level Level{ get; set;} = null!;
+     public ICollection<Enrollement>Enrollements {get; set;} = new List<Enrollement>();
+    
 }

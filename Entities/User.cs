@@ -41,4 +41,5 @@ public class User
         get;
         set;
     }
+public Role Role {get; set;} = null!;
 }

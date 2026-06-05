@@ -27,4 +27,5 @@ public class AcademicYear
         get;
         set;
     }
+    public ICollection<Enrollement> Enrollements { get; set;} = new List<Enrollement>();
 }

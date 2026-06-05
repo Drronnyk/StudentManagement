@@ -14,7 +14,7 @@ public class Enrollement
         set;
 
     }
-    public int ClassId
+    public int ClassroomId
     {
         get;
         set;
@@ -59,5 +59,20 @@ public class Enrollement
         get;
         set;
     }
+    public Student Student
+    {
+        get;
+        set;
+    }= null!;
+    public Classroom Classroom
+    {
+        get;
+        set;
+    }= null!;
+     public AcademicYear AcademicYear
+    {
+        get;
+        set;
+    }= null!;
     
 }

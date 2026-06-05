@@ -93,5 +93,5 @@ public class Student
         set;
     }
 
-
+public ICollection<Enrollement> Enrollements { get; set;} = new List<Enrollement>();
 }
