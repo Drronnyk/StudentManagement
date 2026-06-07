@@ -7,6 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseSqlite("Data Source = StudentManagement.db ")
 );
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 var app = builder.Build();
 app.MapControllers();
 app.Run();

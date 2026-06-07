@@ -1,6 +1,6 @@
 using StudentManagementApi.Api.Helpers;
 
-public class Student
+public class StudentDetailDto
 {
     public int Id
     {
@@ -8,11 +8,6 @@ public class Student
         set;
     }
     public string RegistrationNumber
-    {
-        get;
-        set;
-    }=string.Empty;
-    public string Address
     {
         get;
         set;
@@ -27,11 +22,32 @@ public class Student
         get;
         set;
     }=string.Empty;
-    public char gender
+    public char Gender
     {
         get;
         set;
     }
+    public StudentStatus Status
+    {
+        get;
+        set;
+    }
+    public string Phone
+    {
+        get;
+        set;
+    }=string.Empty;
+    public string Email
+    {
+        get;
+        set;
+    }=string.Empty;
+    public string DepartmentName
+    {
+        get;
+        set;
+    }=string.Empty;
+
     public DateTime DateOfBirth
     {
         get;
@@ -47,18 +63,12 @@ public class Student
         get;
         set;
     }=string.Empty;
-    public string Phone
+    public string Address
     {
         get;
         set;
     }=string.Empty;
-    public string Email
-    {
-        get;
-        set;
-    }=string.Empty;
-    public string Photo
-    {
+    public string photo    {
         get;
         set;
     }=string.Empty;
@@ -72,31 +82,17 @@ public class Student
         get;
         set;
     }=string.Empty;
-    public StudentStatus StudentStatus
+    public bool CreatedAt
     {
         get;
         set;
     }
-    public int? UserId
+    public bool UpdateAt
     {
         get;
         set;
-    }
-     public DateTime CreatedAt
-    {
-        get;
-        set;
-    }
-     public DateTime UpdateAt
-    {
-        get;
-        set;
-    }
-     public bool IsDeleted
-    {
-        get;
-        set;
-    }
+    }                                   
 
-public ICollection<Enrollement> Enrollements { get; set;} = new List<Enrollement>();
+
+
 }
