@@ -72,7 +72,7 @@ public class Student
         get;
         set;
     }=string.Empty;
-    public StudentStatus StudentStatus
+    public StudentStatus Status
     {
         get;
         set;
