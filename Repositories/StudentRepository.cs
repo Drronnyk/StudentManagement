@@ -40,4 +40,17 @@ public class StudentRepository : GenericRepository<Student>, IStudentRepository
         student.IsDeleted = true;
         await Save();
     }
+    public async Task<Student?> Restore(int id)
+    {
+        var student = await _context.Set<Student>().FindAsync(id);
+        if(student is null)
+        return null;
+        student.IsDeleted = false;
+        await Save();
+        return student;
+    }
+    public async  Task<Student?> GetDeleteById(int id)
+    {
+        return await _context.Set<Student>().FirstOrDefaultAsync(s =>s.Id == id && s.IsDeleted == true);
+    }
 }

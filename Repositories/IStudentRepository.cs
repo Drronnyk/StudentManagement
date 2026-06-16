@@ -12,5 +12,9 @@ public interface IStudentRepository : IGenericRepository<Student>
     
     Task<IEnumerable<Student>> GetByStatus(StudentStatus status);
 
+    Task<Student?> GetDeleteById(int id);
+
+    Task<Student?> Restore(int id);
+
     Task SoftDelete(int id);
 }
